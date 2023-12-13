@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+
+</head>
+
+<body>
+<header>
+    <h1>Interactive Map for Exploring the Factors That Impact Global Food Security</h1>
+</header>
+
+<p>Select a variable from the dropdown menu to see how its values vary from country to country</p>
+<p>Hover over each country's marker to view its value for the selected variable</p>
+
+<!-- Add this select element to your HTML body -->
+<select id="columnSelector" class="custom-dropdown">
+    <option value="avg_diet_energy_pct">Average dietary energy supply adequacy (percent) (3-year average)</option>
+    <option value="cereal_import_ratio_pct">Cereal import dependency ratio (percent) (3-year average)</option>
+    <option value="pct_arable_land_irrigation">Percent of arable land equipped for irrigation (percent) (3-year average)</option>
+    <option value="mod_severe_insecure_female_pct">Prevalence of moderate or severe food insecurity in the female adult population (percent) (3-year average)</option>
+    <option value="mod_severe_insecure_male_pct">Prevalence of moderate or severe food insecurity in the male adult population (percent) (3-year average)</option>
+    <option value="mod_severe_insecure_total_pop_pct">Prevalence of moderate or severe food insecurity in the total population (percent) (3-year average)</option>
+    <option value="severe_insecure_female_pct">Prevalence of severe food insecurity in the female adult population (percent) (3-year average)</option>
+    <option value="severe_insecure_male_pct">Prevalence of severe food insecurity in the male adult population (percent) (3-year average)</option>
+    <option value="severe_insecure_total_pop_pct">Prevalence of severe food insecurity in the total population (percent) (3-year average)</option>
+    <option value="undernourishment_pct">Prevalence of undernourishment (percent) (3-year average)</option>
+    <option value="diet_cereal_roots_tubers">Share of dietary energy supply derived from cereals roots and tubers (kcal/cap/day) (3-year average)</option>
+    <option value="food_imports_pct">Value of food imports in total merchandise exports (percent) (3-year average)</option>
+    <option value="2018_cost_ppp">2018 Cost of a healthy diet (PPP dollar per person per day)</option>
+    <option value="2019_cost_ppp">2019 Cost of a healthy diet (PPP dollar per person per day)</option>
+    <option value="2020_cost_ppp">2020 Cost of a healthy diet (PPP dollar per person per day)</option>
+    <option value="2018_num_unable_to_afford_diet">2018 Number of people unable to afford a healthy diet (million)</option>
+    <option value="2019_num_unable_to_afford_diet">2019 Number of people unable to afford a healthy diet (million)</option>
+    <option value="2020_num_unable_to_afford_diet">2020 Number of people unable to afford a healthy diet (million)</option>
+    <option value="2018_pct_unable_to_afford_diet">2018 Percentage of the population unable to afford a healthy diet (percent)</option>
+    <option value="2019_pct_unable_to_afford_diet">2019 Percentage of the population unable to afford a healthy diet (percent)</option>
+    <option value="2020_pct_unable_to_afford_diet">2020 Percentage of the population unable to afford a healthy diet (percent)</option>
+</select>
+
+
+<div id="map-container"></div>
+<div id="map" style="height: 500px; margin-top: 20px;"></div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
